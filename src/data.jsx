@@ -1,3 +1,7 @@
+/**
+ * Static fallback cart data (same shape as API response).
+ * This project uses the API in context.jsx for initial data; this file is kept for reference or offline/fallback use.
+ */
 const cartItems = [
   {
     id: 'rec1JZlfCIBOPdcT2',

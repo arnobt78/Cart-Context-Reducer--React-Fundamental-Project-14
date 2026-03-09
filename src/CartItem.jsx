@@ -1,5 +1,10 @@
+/**
+ * Single cart row: image, title, price, quantity controls (up/down), and remove button.
+ * Props match API item shape (id, img, title, price, amount). Actions come from context.
+ */
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 import { useGlobalContext } from './context';
+
 const CartItem = ({ id, img, title, price, amount }) => {
   const { remove, increase, decrease } = useGlobalContext();
   return (

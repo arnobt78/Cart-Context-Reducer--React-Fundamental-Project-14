@@ -1,5 +1,10 @@
+/**
+ * Top navigation bar: shows app title and cart icon with total item count.
+ * totalAmount comes from context (see utils.getTotals); updates when cart changes.
+ */
 import { FaCartPlus } from 'react-icons/fa';
 import { useGlobalContext } from './context';
+
 const Navbar = () => {
   const { totalAmount } = useGlobalContext();
   return (

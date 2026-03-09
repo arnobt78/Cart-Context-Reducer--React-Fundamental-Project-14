@@ -1,3 +1,7 @@
+/**
+ * Cart reducer: pure function (state, action) -> newState.
+ * Cart is stored as a Map(key = item id, value = item). We never mutate; we copy and return new state.
+ */
 import {
   CLEAR_CART,
   REMOVE,
@@ -28,7 +32,7 @@ const reducer = (state, action) => {
     const newCart = new Map(state.cart);
     const itemId = action.payload.id;
     const item = newCart.get(itemId);
-
+    // If amount is 1, decrease means remove the item
     if (item.amount === 1) {
       newCart.delete(itemId);
       return { ...state, cart: newCart };
@@ -42,6 +46,7 @@ const reducer = (state, action) => {
     return { ...state, loading: true };
   }
   if (action.type === DISPLAY_ITEMS) {
+    // API returns array; we convert to Map keyed by id for O(1) lookups
     const newCart = new Map(action.payload.cart.map((item) => [item.id, item]));
     return { ...state, loading: false, cart: newCart };
   }

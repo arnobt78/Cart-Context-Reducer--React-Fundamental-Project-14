@@ -1,3 +1,9 @@
+/*
+  Global + project-specific styles for Cart Context Reducer.
+  Global: reset, :root variables, typography, buttons, form, loading spinner.
+  Project: .nav-*, .cart, .cart-item, .amount-btn, etc. for Navbar and CartContainer/CartItem.
+*/
+
 /* ============= GLOBAL CSS =============== */
 
 *,
@@ -252,6 +258,7 @@ ul {
   margin-top: 1rem;
 }
 /* ============= PROJECT CSS =============== */
+/* Styles for Navbar (top bar with cart count) and Cart section (list + empty state + footer) */
 
 /*
 =============== 

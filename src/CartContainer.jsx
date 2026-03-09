@@ -1,9 +1,14 @@
+/**
+ * Main cart UI: either empty state (with "Return to default cart" button) or list of CartItems + footer.
+ * Cart is a Map; we convert to array via Array.from(cart.entries()) for mapping over [id, item] pairs.
+ */
 import CartItem from './CartItem';
 import { useGlobalContext } from './context';
 
 const CartContainer = () => {
   const { cart, clearCart, totalCost, resetCart } = useGlobalContext();
 
+  // Map.entries() gives [id, item]; Array.from lets us .map() in JSX
   const cartArray = Array.from(cart.entries());
 
   if (cartArray.length === 0) {
@@ -14,6 +19,7 @@ const CartContainer = () => {
           <h2>your bag</h2>
           <h4 className='empty-cart'>is currently empty</h4>
         </header>
+        {/* resetCart re-fetches from API so default cart list appears again (no page reload) */}
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <button className='btn' type='button' onClick={resetCart}>
             Return to default cart
@@ -28,7 +34,7 @@ const CartContainer = () => {
       <header>
         <h2>your bag</h2>
       </header>
-      {/* cart items */}
+      {/* cart items: each entry is [id, item]; spread item props into CartItem */}
       <div>
         {cartArray.map((cartItem) => {
           const [id, item] = cartItem;
