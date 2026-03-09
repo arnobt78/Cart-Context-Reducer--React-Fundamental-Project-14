@@ -1,8 +1,8 @@
 import CartItem from './CartItem';
 import { useGlobalContext } from './context';
-import cartItems from './data';
+
 const CartContainer = () => {
-  const { cart, clearCart, totalCost } = useGlobalContext();
+  const { cart, clearCart, totalCost, resetCart } = useGlobalContext();
 
   const cartArray = Array.from(cart.entries());
 
@@ -14,6 +14,11 @@ const CartContainer = () => {
           <h2>your bag</h2>
           <h4 className='empty-cart'>is currently empty</h4>
         </header>
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <button className='btn' type='button' onClick={resetCart}>
+            Return to default cart
+          </button>
+        </div>
       </section>
     );
   }

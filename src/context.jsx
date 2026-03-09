@@ -1,6 +1,5 @@
 import { useContext, useReducer, useEffect, createContext } from 'react';
 import reducer from './reducer';
-import cartItems from './data';
 import {
   CLEAR_CART,
   REMOVE,
@@ -55,6 +54,7 @@ export const AppProvider = ({ children }) => {
         decrease,
         totalAmount,
         totalCost,
+        resetCart: fetchData,
       }}
     >
       {children}
