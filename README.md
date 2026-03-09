@@ -1,12 +1,6 @@
-# Cart - React Fundamental Project 14
+# Cart Context Reducer - React, Vite, JavaScript, Context API, useReducer, Map, Custom CSS Fundamental Project 14
 
-<img width="837" alt="Screenshot 2025-02-09 at 16 41 04" src="https://github.com/user-attachments/assets/12cd0f22-c57d-444a-9eff-6300a20b8fd8" />
-
----
-
-A modern, fully functional React Shopping Cart application designed for learning React fundamentals. This project demonstrates how to manage state with useReducer and Context API, fetch data asynchronously, and implement real-world cart features using efficient JavaScript data structures like Map.
-
-- **Live-Demo:** https://cart-arnob.netlify.app/
+- **Live Demo:** []()
 
 ---
 
@@ -86,7 +80,7 @@ Cart--React-Fundamental-Project-14/
         └── ... (CSS/SCSS files)
 ```
 
-> _*Note: Actual filenames may vary. Explore `/src` for up-to-date code structure._  
+> _\*Note: Actual filenames may vary. Explore `/src` for up-to-date code structure._
 
 ---
 
@@ -131,7 +125,8 @@ Open the app to browse a list of items fetched from the API, with add/remove and
 
 ### 3. Data Management
 
-- **Initial Data Load:** Cart data is fetched from:  
+- **Initial Data Load:** Cart data is fetched from:
+
   ```js
   const url = "https://www.course-api.com/react-useReducer-cart-project";
   ```
@@ -149,8 +144,8 @@ The cart state is managed globally using React Context and the useReducer hook.
 
 ```js
 function cartReducer(state, action) {
-  switch(action.type) {
-    case 'CLEAR_CART':
+  switch (action.type) {
+    case "CLEAR_CART":
       return { ...state, cart: new Map() };
     // Other cases: REMOVE_ITEM, INCREASE, DECREASE, etc.
     default:
@@ -214,6 +209,7 @@ const cart = new Map(items.map((item) => [item.id, item]));
 ### 3. Example useReducer Action
 
 ```js
+dispatch({ type: "INCREASE", payload: { id: "itemId"
 dispatch({ type: 'INCREASE', payload: { id: 'itemId' } });
 ```
 
