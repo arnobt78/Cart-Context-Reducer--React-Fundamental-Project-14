@@ -9,7 +9,8 @@ A learning-focused shopping cart application built with React. It demonstrates *
 
 - **Live Demo:** [https://cart-context-reducer.vercel.app/](https://cart-context-reducer.vercel.app/)
 
-<img width="1619" height="881" alt="Screenshot 2026-03-11 at 16 03 27" src="https://github.com/user-attachments/assets/1dbbe00b-eec2-4743-974a-ad3f7c482b86" /> <img width="1316" height="780" alt="Screenshot 2026-03-11 at 16 03 41" src="https://github.com/user-attachments/assets/fde119e4-9da9-4550-8387-6d2cd2141d3b" />
+![Screenshot 2026-03-11 at 16 03 27](https://github.com/user-attachments/assets/1dbbe00b-eec2-4743-974a-ad3f7c482b86)
+![Screenshot 2026-03-11 at 16 03 41](https://github.com/user-attachments/assets/fde119e4-9da9-4550-8387-6d2cd2141d3b)
 
 ## Table of Contents
 
